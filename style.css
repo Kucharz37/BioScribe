@@ -1,0 +1,219 @@
+:root {
+    --primary: #FF4B91;
+    --secondary: #FF8DC7;
+    --background: #FFDFDF;
+    --text: #2D2D2D;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-switcher select {
+    width: auto;
+    padding: 5px 25px 5px 10px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    background: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.logo-text {
+    font-size: 2.8rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #FF4B91, #FF8DC7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text);
+    opacity: 0.8;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+input, select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255,75,145,0.2);
+}
+
+.generator-section {
+    position: relative;
+}
+
+.settings-toggle {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    opacity: 0.6;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.settings-toggle:hover {
+    opacity: 1;
+}
+
+.advanced-settings {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.length-control {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.length-input {
+    width: 80px;
+    padding: 4px 8px;
+}
+
+.hint {
+    color: #666;
+    font-size: 0.8rem;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+#result {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+#result.active {
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.loading {
+    text-align: center;
+    color: var(--primary);
+    font-weight: 600;
+    display: none;
+}
+
+.loading.active {
+    display: block;
+}
+
+.copy-btn {
+    margin-top: 1rem;
+    background: var(--secondary);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    .logo-text {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+}

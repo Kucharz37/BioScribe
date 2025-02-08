@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioScribe - AI Bio Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="language-switcher">
+            <select id="language" title="Wybierz język">
+                <option value="pl">🇵🇱 PL</option>
+                <option value="en">🇬🇧 EN</option>
+                <option value="de">🇩🇪 DE</option>
+                <option value="it">🇮🇹 IT</option>
+                <option value="nl">🇳🇱 NL</option>
+            </select>
+        </div>
+
+        <div class="header">
+            <img src="logo.png" alt="BioScribe" class="logo-img">
+            <h1>
+                <span class="logo-text">BioScribe</span>
+                <span class="subtitle">AI Bio Generator</span>
+            </h1>
+        </div>
+
+        <form id="quiz">
+            <div class="input-group">
+                <label for="hobby">Twoje hobby i pasje:</label>
+                <input type="text" id="hobby" placeholder="np. podróże, fotografia, sport..." required>
+            </div>
+            
+            <div class="input-group">
+                <label for="personality">Twój charakter:</label>
+                <select id="personality" required>
+                    <option value="zabawny">Zabawny/a</option>
+                    <option value="romantyczny">Romantyczny/a</option>
+                    <option value="tajemniczy">Tajemniczy/a</option>
+                    <option value="spontaniczny">Spontaniczny/a</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="goal">Czego szukasz?</label>
+                <select id="goal" required>
+                    <option value="poważnego związku">Poważnego związku</option>
+                    <option value="przyjaźni">Przyjaźni</option>
+                    <option value="ciekawych znajomości">Ciekawych znajomości</option>
+                    <option value="spontanicznych przygód">Spontanicznych przygód</option>
+                    <option value="undefined">Jeszcze nie wiem</option>
+                </select>
+            </div>
+            
+            <div class="generator-section">
+                <button type="submit" class="main-button">Generuj Bio ✨</button>
+                <button type="button" class="settings-toggle" title="Ustawienia zaawansowane">⚙️</button>
+                
+                <div class="advanced-settings" hidden>
+                    <div class="length-control">
+                        <label>
+                            <input type="checkbox" id="custom-length-toggle">
+                            Własna długość opisu
+                        </label>
+                        <input 
+                            type="number" 
+                            id="custom-length" 
+                            min="100" 
+                            max="1000" 
+                            value="1000"
+                            disabled
+                            class="length-input"
+                        >
+                        <span class="hint">100-1000 znaków</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+        
+        <div class="loading">Generuję wyjątkowy opis...</div>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
