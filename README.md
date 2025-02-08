@@ -1,2 +1,2 @@
-# randkowy-generator
-Generator tekstów na portale randkowe
+# Bio Generator
+Generator opisu na podstawie informacji wprowadzonych przez użytkownika na portale społecznościowe i randkowe
